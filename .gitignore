@@ -1,0 +1,6 @@
+.env
+mypython/
+.vscode
+hospitalmanagement/__pycache__/
+hospital/__pycache__/
+hospital/migrations/
