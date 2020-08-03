@@ -10,7 +10,11 @@ class AdminSigupForm(forms.ModelForm):
         'password': forms.PasswordInput()
         }
 
+# class ProfileForm(forms.ModelForm):
 
+#     class Meta:
+#         model =Profile
+#         exclude=['user']
 #for student related form
 class DoctorUserForm(forms.ModelForm):
     class Meta:

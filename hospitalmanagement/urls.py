@@ -23,10 +23,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home_view,name=''),
     
+   
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
 
-
+    # path('profile/$', views.profile, name='profile'),
+    # path('profile/<int:pk>/$', views.profile, name='profile'),
+    # path('newprofile/', views.new_profile, name='new_profile'),
     path('adminclick', views.adminclick_view),
     path('doctorclick', views.doctorclick_view),
     path('patientclick', views.patientclick_view),
@@ -42,7 +45,7 @@ urlpatterns = [
 
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
     path('logout', LogoutView.as_view(template_name='hospital/index.html'),name='logout'),
-
+    # path('admin-appointment',views.admin_appointment_view,name='admin-appointment'),
 
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
      path('patient-dashboard', views.patient_dashboard_view,name='patient-dashboard'),
@@ -54,5 +57,6 @@ urlpatterns = [
     path('admin-patient', views.admin_patient_view,name='admin-patient'),
     path('admin-view-patient', views.admin_view_patient_view,name='admin-view-patient'),
     path('doctor-dashboard', views.doctor_dashboard_view,name='doctor-dashboard'),
+    path('doctor-patient', views.doctor_patient_view,name='doctor-patient'),
    
 ]
