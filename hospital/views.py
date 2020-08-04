@@ -14,27 +14,13 @@ def home_view(request):
         return HttpResponseRedirect('afterlogin')
     return render(request,'hospital/index.html')
 
-
-@login_required(login_url='/accounts/login/')
-def new_profile(request):
-    current_user = request.user
-    profile=Profile.objects.get(user=request.user)
-    image= Profile.objects.get(user=request.user)
-    if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES,instance=request.user.profile)
-        if form.is_valid():
-            form.save()
-        return redirect('/')
-
-    else:
-        form = ProfileForm()
-    return render(request, "edit_profile.html", {"form":form,"image":image}) 
+ 
  
 def adminclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
     return render(request,'hospital/adminclick.html')
-    
+
 
 def doctorclick_view(request):
     if request.user.is_authenticated:

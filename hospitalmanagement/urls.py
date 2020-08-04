@@ -27,9 +27,6 @@ urlpatterns = [
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
 
-    # path('profile/$', views.profile, name='profile'),
-    # path('profile/<int:pk>/$', views.profile, name='profile'),
-    # path('newprofile/', views.new_profile, name='new_profile'),
     path('adminclick', views.adminclick_view),
     path('doctorclick', views.doctorclick_view),
     path('patientclick', views.patientclick_view),
